@@ -1,0 +1,45 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<p id="all-posts-label">
+    Posts from the profiles you follow
+</p>
+
+{% for post in page_obj %}
+    <div id="post" class="card">
+        <h6 class="card-header">
+            <a id="name" href="{% url 'profile' post.user.id %}">{{ post.user }}</a>
+        </h6>
+        <div class="card-body">
+          <p id="text" class="card-text">{{ post.text }}</p>
+          <p id="timestamp" class="card-text">{{ post.timestamp }}</p>
+          {% if user in post.getLikes %}
+            <button style="background-color: red; color: white;" id="like-{{ post.id }}" type="button" onclick="like('{{ post.id }}')" class="btn btn-outline-danger">{{ post.likes }}</button>
+          {% else %}
+            <button style="background-color: white; color: red;" id="like-{{ post.id }}" type="button" onclick="like('{{ post.id }}')" class="btn btn-outline-danger">{{ post.likes }}</button>
+          {% endif %}
+        </div>
+    </div>
+    <br>
+    
+    {% if page_obj.has_previous %}
+        <a id="prev" href="?page={{ page_obj.previous_page_number }}">previous</a>
+    {% endif %}
+        <div id="number"> {{ page_obj.number }} </div>
+    {% if page_obj.has_next %}
+        <a id="next" href="?page={{ page_obj.next_page_number }}">next</a>
+    {% endif %}
+
+    {% if page_obj.has_previous %}
+        <a id="prev" href="?page={{ page_obj.previous_page_number }}">previous</a>
+    {% endif %}
+        <div id="number"> {{ page_obj.number }} </div>
+    {% if page_obj.has_next %}
+        <a id="next" href="?page={{ page_obj.next_page_number }}">next</a>
+    {% endif %}
+
+{% empty %}
+    <h4 id="no-post">No Post</h3>
+{% endfor %}
+</div>
+{% endblock %}

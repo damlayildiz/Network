@@ -1,0 +1,53 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<p id="user-name">{{ owner.username }}</p>
+<p id="follow-info">Following: {{ followees }} &emsp; Followers: {{ followers }}</p> 
+
+{% if diff_person %}
+    <form action="{% url 'profile' owner.id %}" method="post">
+        {% csrf_token %}
+        {% if following %}
+            <button id="f" type="submit" class="btn btn-info">Unfollow</button>
+        {% else %}
+            <button id="f" type="submit" class="btn btn-info">Follow</button>
+        {% endif %}
+    </form>
+{% endif %}
+
+{% for post in page_obj %}
+<div id="post" class="card">
+    <h6 class="card-header">
+        <a id="name" href="{% url 'profile' post.user.id %}">{{ post.user }}</a>
+    </h6>
+    <div class="card-body">
+      <p id="post-{{ post.id }}" class="card-text">{{ post.text }}</p>
+      <p id="timestamp" class="card-text">{{ post.timestamp }}</p>
+      
+      {% if user in post.getLikes %}
+        <button style="background-color: red; color: white;" id="like-{{ post.id }}" type="button" onclick="like('{{ post.id }}')" class="btn btn-outline-danger">{{ post.likes }}</button>
+      {% else %}
+        <button style="background-color: white; color: red;" id="like-{{ post.id }}" type="button" onclick="like('{{ post.id }}')" class="btn btn-outline-danger">{{ post.likes }}</button>
+      {% endif %}
+      
+      {% if lurker == post.user %}
+        <button id="edit" onclick="edit('{{ post.id }}')" type="button" class="btn btn-outline-info">Edit</button>
+      {% endif %}
+        <textarea id="text-{{ post.id }}"  class="form-control mb-2" style="display:none;"></textarea>
+        <button id="edit-{{ post.id }}" class="btn btn-primary" style="display:none;">Save</button>
+    </div>
+</div>
+<br>
+
+{% if page_obj.has_previous %}
+<a id="prev" href="?page={{ page_obj.previous_page_number }}">previous</a>
+{% endif %}
+<div id="number"> {{ page_obj.number }} </div>
+{% if page_obj.has_next %}
+<a id="next" href="?page={{ page_obj.next_page_number }}">next</a>
+{% endif %}
+
+{% empty %}
+<h4 id="no-post">No Post</h3>
+{% endfor %}
+{% endblock %}

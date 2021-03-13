@@ -1,0 +1,88 @@
+#new-post {
+    margin-left: 300px;
+    margin-top: 10px;
+    width: 1200px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+#add-btn {
+    margin-top: 10px;
+    margin-left: 1140px;
+}
+
+#all-posts-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:xx-large;
+    margin-left: 300px;
+}
+
+#no-post {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 900px;
+    margin-top: 50px;
+}
+
+#post {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 300px;
+    width: 1200px;
+}
+
+#text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+#timestamp {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    color: gray;
+}
+
+#prev {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 750px;
+}
+
+#next {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 900px;
+}
+
+#number {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    left: 860px;
+}
+
+#name {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
+
+#user-name {
+    font-size: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#follow-info {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#f {
+    margin-left: 895px;
+    margin-bottom: 50px;
+}
+
+#edit {
+    margin-left: 60px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
