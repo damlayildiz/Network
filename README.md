@@ -16,7 +16,8 @@ This is a Twitter-like social network website for making posts and following use
 ## Screenshots and Demo
   ![Screenshot from 2021-03-14 01-09-43](https://user-images.githubusercontent.com/56313500/111062826-77967800-84bc-11eb-84d7-f2fbe10bed64.png)
 ---
-![Screenshot from 2021-03-14 01-10-13](https://user-images.githubusercontent.com/56313500/111062831-7a916880-84bc-11eb-8f3e-a3c323dcd28b.png)
+  ![Screenshot from 2021-03-14 01-10-03](https://user-images.githubusercontent.com/56313500/111062875-bdebd700-84bc-11eb-9b2a-b816b5b55212.png)
+
 
 [Youtube Demo Link](https://youtu.be/xZ2BfXU8EF8)
 
