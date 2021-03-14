@@ -3,10 +3,11 @@ This is a Twitter-like social network website for making posts and following use
 
 ## Features 
 -   Users can **create new text-based post**.
+
 -   **All Posts Page** where users can see all posts from all users, with the most recent posts first. 
 -   Clicking on a username takes users to **Profile Page**. This page displays
-	- the number of followers the user has, and the number of people that the user follows.
-        - all of the posts for that user, in reverse chronological order.
+  - the number of followers the user has, and the number of people that the user follows.
+  - all of the posts for that user, in reverse chronological order.
 -   **Following Page** which displays all posts made by users that the current user follows.
 -   By clicking **Edit button**,  user can edit the content of their post.
 -   User and can **like or unlike** a post. 
