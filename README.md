@@ -14,8 +14,6 @@ This is a Twitter-like social network website for making posts and following use
 -   There can be max 10 posts on a page, users can change pages with *Next*  and  *Previous* buttons.
 
 ## Screenshots and Demo
-  ![Screenshot from 2021-03-14 01-09-43](https://user-images.githubusercontent.com/56313500/111062826-77967800-84bc-11eb-84d7-f2fbe10bed64.png)
----
   ![Screenshot from 2021-03-14 01-10-03](https://user-images.githubusercontent.com/56313500/111062875-bdebd700-84bc-11eb-9b2a-b816b5b55212.png)
 
 
